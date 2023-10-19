@@ -1,0 +1,130 @@
+/*colores{
+background-color:#75300c;
+background-color:#1e0f0c; 
+background-color: #a25b14; 
+background-color:#cfa02a;
+background-color: #d8d5c2;
+background-color: #6f6854;
+background-color:#bcac8c; 
+background-color:#f2da73;
+}
+
+fuentes
+font-family: 'Autour One', cursive;
+font-family: 'Young Serif', serif;
+font-family: 'Signika Negative', sans-serif;
+
+*/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Signika+Negative:wght@300&family=Young+Serif&display=swap');
+
+
+*{
+    box-sizing:border-box ;
+
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #5d2417;
+}
+
+header{
+    text-align: center;
+}
+
+h1{
+    color:#f8d94c;
+    font-family: 'Autour One', cursive;
+    
+}
+
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: 'Autour One', cursive;
+    background-color: #1e0f0c;
+    
+}
+
+li{
+    padding: 3%;
+}
+
+a{
+    text-decoration: none;
+    color: #d8d5c2;      
+}
+
+main h2{
+    color:#f8d94c;
+    font-family:'Young Serif', serif;
+    font-weight: 100;
+}
+
+main p{
+    color:#d8d5c2;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+#inicio{
+    height: 500px;
+}
+
+#nosotros{
+    height: 500px;
+    background-color: #793f05;
+}
+
+#cervezas{
+    display: block;
+    justify-content: center;
+    align-items:center;
+    height: 500px;
+    background-color:#1e0f0c ;
+}
+
+#cervezas h2{
+    text-align: center;
+    padding: 3%;
+}
+
+.tipos-cerveza{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cerveza{
+    height: 300px;
+    width: 30%;
+    padding: 3%;
+    border: #d8d5c2;
+    border-style:solid;
+}
+
+#contacto{
+    display: block;
+}
+
+footer .derechos{
+    text-align: center;
+}
+
+#contacto h2{
+    text-align: center;
+}
+
+.contacto-redes{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
