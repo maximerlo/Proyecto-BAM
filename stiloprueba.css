@@ -1,0 +1,62 @@
+.menu-toggle {
+    display: none;
+  }
+  
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+  }
+
+  .menu-icon img{
+    width: 30px;
+  }
+  
+  .menu {
+    display: none;
+  background-color: #fff;
+  position: absolute;
+  top: 50px;
+  right: 0; /* Cambia 'left' a 'right' para alinear a la derecha */
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin: 10px 0;
+  }
+  
+  .menu-close {
+    font-size: 20px;
+  cursor: pointer;
+  display: block;
+  /* Alinea la "X" a la derecha */
+  float: right;
+  /* Puedes ajustar el margen derecho según tus necesidades */
+  margin-right: 20px;
+  }
+
+  /* Estilos para mostrar el menú cuando el input está marcado (checkbox checked) 
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: block;
+  }
+  */
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: block;
+  }
+  
+  #menu-toggle:checked + .menu-icon {
+    display: none;
+  }
+  
+  #menu-toggle:checked + .menu-icon + .menu + .menu-close {
+    display: block;
+  }
