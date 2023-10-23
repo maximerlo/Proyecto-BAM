@@ -9,29 +9,38 @@
 <body>
     <header>
 
-        <h1>CERVECERIA </h1>
-        <a id="logo" href="/">LOGO
-            <img src="" alt="logo de la marca">
-        </a>
+        <div class="logo">
+            <a id="logo-SM" href="/">
+                <img src="assets/logo-sierra mágica 2.jpg" alt="logo de la marca">
+            </a>
+        </div>
 
-        <nav>
+        <div class="menu-burger">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <img src="assets/beer.png" alt="icono de cerveza">
+                </label>
             
-            <ul>
-                <li><a href="#inicio">inicio</a></li>
-                <li><a href="#nosotros">nosotros</a></li>
-                <li><a href="#cervezas">cervezas</a></li>
-                <li><a href="#contacto">contacto</a></li>
-                <li><a href="#comprar">comprar</a></li>
-            </ul>
 
-        </nav>
+            <nav class="menu">
+                <label for="menu-toggle" class="menu-close">X</label>
+                
+                <ul>
+                    <li><a href="#inicio">inicio</a></li>
+                    <li><a href="#nosotros">nosotros</a></li>
+                    <li><a href="#cervezas">cervezas</a></li>
+                    <li><a href="#contacto">contacto</a></li>
+                    <li><a href="#comprar">comprar</a></li>
+                </ul>
 
+            </nav>
+        </div>
     </header>
 
     <main>
         <section id="inicio">
             
-            <h2>Bienvenidos a nuestra cervecería artesanal</h2>
+            <h1>Bienvenidos a nuestra cervecería artesanal</h1>
             <p>Te invitamos a explorar y experimentar el deseo por una buena cerveza hecha en familia</p>
         </section>
 
@@ -75,7 +84,9 @@
     <footer>
 
         <section id="contacto">
-            <h2>Contacto</h2>
+            <div class="text-contacto">
+                <h2>Contacto</h2>
+            </div>
             <div class="contacto-redes">
                 <div class="info-contacto">
 
@@ -88,9 +99,15 @@
 
                     <div class="redes">
                         <h3>Nuestras Redes</h3>
-                        <a href="https://www.instagram.com/" target="_blank">instragram</a>
-                        <a href="https://www.facebook.com" target="_blank">facebook</a>
-                        <a href="https://twitter.com" target="_blank">twitter</a>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="assets/instagram.png" alt="icono instagram enlace">
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="assets/facebook.png" alt="icono facebook enlace">
+                        </a>
+                        <a href="https://twitter.com" target="_blank">
+                            <img src="assets/twitter.png" alt="icono twitter enlace">
+                        </a>
                     </div>
                 </div>
 
@@ -106,7 +123,7 @@
                         <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono"><br><br>
                     
                         <label for="comentarios">Comentarios:</label><br>
-                        <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Escribe tus comentarios aquí"></textarea><br><br>
+                        <textarea id="comentarios" name="comentarios" placeholder="Escribe tus comentarios aquí"></textarea><br><br>
                     
                         <input type="submit" value="Enviar">
                     </form>
