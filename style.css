@@ -23,7 +23,6 @@ font-family: 'Signika Negative', sans-serif;
 
 *{
     box-sizing:border-box ;
-
 }
 
 
@@ -33,18 +32,37 @@ body{
     background-color: #5d2417;
 }
 
+
+
 header{
-    text-align: center;
+    display: flex;
+    justify-content: center; 
+    margin: 0;
+    padding: 10px;
+
 }
 
-h1{
+.logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#logo-SM img{
+    width: 120px;
+}
+
+
+
+/* h1{
     color:#f8d94c;
     font-family: 'Autour One', cursive;
-    
-}
+    font-size: 1.5rem;
+    margin: 0.5rem;
+} */
 
 
-nav ul{
+/* nav ul{
     display: flex;
     list-style: none;
     justify-content: center;
@@ -56,6 +74,109 @@ nav ul{
 
 li{
     padding: 3%;
+} */
+
+/*menú hamburguesa*/
+
+.menu-toggle {
+    display: none;
+}
+
+/* .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    float: right;
+    
+} */
+
+/* Establece la posición fija para el icono del menú hamburguesa */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    float: right;
+    display: none;
+    position: relative;
+}
+
+.beer-icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+.beer-icon:hover{
+animation: shake 1.5s infinite ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: scale(1);
+    }
+    
+    50% {
+        transform: scale(1.2);
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+}
+
+.menu {
+    display: none;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0; 
+    left: 0;
+    width: 100vw;
+    text-align: center;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin:0;
+}
+
+.menu-close {
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+    float: right;
+    margin-right: 20px;
+}
+
+/*funcionalidad menu hamburguesa*/
+#menu-toggle:checked + .menu-icon + .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#menu-toggle:checked + .menu-icon {
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + .menu + .menu-close {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#menu-toggle:not(:checked) + .menu-icon {
+    display: block;
+}
+
+
+#menu-toggle:not(:checked) + .menu-icon + .menu {
+    display: none;
 }
 
 a{
@@ -63,24 +184,59 @@ a{
     color: #d8d5c2;      
 }
 
-main h2{
+main h1{
     color:#f8d94c;
     font-family:'Young Serif', serif;
     font-weight: 100;
+    margin: 0;
+    padding: 3%;
 }
 
 main p{
-    color:#d8d5c2;
+    color:#291C06;
     font-family: 'Signika Negative', sans-serif;
+    font-weight:bold;
 }
 
 #inicio{
+    text-align: center;
     height: 500px;
+    background-image: url(assets/Logo-Sierra\ mágica.jpg);
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #291C06;
+
 }
 
 #nosotros{
     height: 500px;
-    background-color: #793f05;
+    text-align: center;
+    background: linear-gradient(45deg,#793f05, #f8d94c);
+    background-size: 200% 200vw; 
+    animation: gradientAnimation 3s infinite alternate;
+    
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+#nosotros h2{
+    margin: 0;
+    padding: 3%;
+    text-transform: uppercase;
+    font-family:'Young Serif', serif;
+    color:#5d2417;
+}
+
+#nosotros p{
+    font-size: 15px;
 }
 
 #cervezas{
@@ -94,6 +250,9 @@ main p{
 #cervezas h2{
     text-align: center;
     padding: 3%;
+    margin: 0;
+    font-family:'Young Serif', serif;
+    text-transform: uppercase;
 }
 
 .tipos-cerveza{
@@ -110,15 +269,27 @@ main p{
     border-style:solid;
 }
 
+
 #contacto{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-footer .derechos{
+.text-contacto{
     text-align: center;
 }
 
-#contacto h2{
+.contacto-redes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-contacto{
+    text-align: center;
+}
+
+footer .derechos{
     text-align: center;
 }
 
@@ -126,5 +297,42 @@ footer .derechos{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
+}
+
+.redes h3{
+    margin: 2%;
+}
+
+.redes a img{
+    width: 20px;
+    margin: 2%;
+}
+
+#comentarios {
+    width: 100%; 
+    min-width: auto; 
+    height: 150px; 
+    max-width: 400px; 
+}
+
+/* media queries */
+
+
+@media screen and (max-width:768px){
+    .menu-bruger {
+        display: block;
+    }
+    
+    .logo {
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width:769px) and (max-width:1024px){
+    #contacto{
+
+        display: block 
+    }
 }
 
