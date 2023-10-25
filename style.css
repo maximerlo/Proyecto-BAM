@@ -32,8 +32,6 @@ body{
     background-color: #5d2417;
 }
 
-
-
 header{
     display: flex;
     justify-content: center; 
@@ -53,30 +51,7 @@ header{
 }
 
 
-
-/* h1{
-    color:#f8d94c;
-    font-family: 'Autour One', cursive;
-    font-size: 1.5rem;
-    margin: 0.5rem;
-} */
-
-
-/* nav ul{
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    text-transform: uppercase;
-    font-family: 'Autour One', cursive;
-    background-color: #1e0f0c;
-    
-}
-
-li{
-    padding: 3%;
-} */
-
-/*menú hamburguesa*/
+/*------------------------------------------------------------menú hamburguesa--------------------------------------*/
 
 .menu-toggle {
     display: none;
@@ -151,7 +126,7 @@ animation: shake 1.5s infinite ease-in-out;
     margin-right: 20px;
 }
 
-/*funcionalidad menu hamburguesa*/
+/*-------------------------------------funcionalidad menu hamburguesa--------------------------------------------*/
 #menu-toggle:checked + .menu-icon + .menu {
     display: block;
     position: fixed;
@@ -198,6 +173,8 @@ main p{
     font-weight:bold;
 }
 
+/*--------------------------------------------SECCION INICIO-------------------------------------------------------*/
+
 #inicio{
     text-align: center;
     height: 500px;
@@ -239,12 +216,15 @@ main p{
     font-size: 15px;
 }
 
+/*----------------------------------------------SECCIÓN CERVEZAS----------------------------------------------------*/
+
 #cervezas{
     display: block;
     justify-content: center;
     align-items:center;
-    height: 500px;
+    height: auto;
     background-color:#1e0f0c ;
+    padding-bottom: 3%;
 }
 
 #cervezas h2{
@@ -253,8 +233,14 @@ main p{
     margin: 0;
     font-family:'Young Serif', serif;
     text-transform: uppercase;
+    color: #f8d94c;
 }
 
+.card-body{
+    height: 150px;
+}
+
+/*
 .tipos-cerveza{
     display: flex;
     justify-content: center;
@@ -267,26 +253,33 @@ main p{
     padding: 3%;
     border: #d8d5c2;
     border-style:solid;
-}
+} */
 
-
+/*-------------------------------------------------FOOTER-----------------------------------------------------------*/
 #contacto{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .text-contacto{
+    width: 100vw;
     text-align: center;
+    margin: 2%;
 }
 
 .contacto-redes{
     display: flex;
     flex-wrap: wrap;
+    width: 80%;
 }
 
 .info-contacto{
-    text-align: center;
+    text-align:center;
+    align-self: self-start;
+    
+    
 }
 
 footer .derechos{
@@ -299,6 +292,10 @@ footer .derechos{
     align-items: center;
 }
 
+.redes{
+    margin-bottom: 3%;
+}
+
 .redes h3{
     margin: 2%;
 }
@@ -307,6 +304,18 @@ footer .derechos{
     width: 20px;
     margin: 2%;
 }
+
+.form-label {
+    width: 120px; /* Ancho fijo para los labels */
+    display: inline-block;
+    text-align: right; /* Alinea el texto a la derecha para que los labels estén alineados con el input */
+    margin-right: 10px; /* Espacio entre el label y el input */
+}
+
+.form-input {
+    width: 250px; /* Ancho fijo para los inputs */
+}
+
 
 #comentarios {
     width: 100%; 
