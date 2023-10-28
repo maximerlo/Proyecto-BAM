@@ -36,8 +36,8 @@ header{
     display: flex;
     justify-content: center; 
     margin: 0;
-    padding: 10px;
-
+    width: 100vw;
+    height: 40px;
 }
 
 .logo{
@@ -53,6 +53,19 @@ header{
 
 /*------------------------------------------------------------menú hamburguesa--------------------------------------*/
 
+.container-menu-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    background-color:#5d2417 ;
+    position:fixed;
+    z-index: 999;
+    
+    
+
+}
 .menu-toggle {
     display: none;
 }
@@ -76,6 +89,7 @@ header{
 .beer-icon{
     width: 30px;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .beer-icon:hover{
@@ -98,32 +112,44 @@ animation: shake 1.5s infinite ease-in-out;
 
 .menu {
     display: none;
-    background-color: #fff;
+    background-color: #000000;
     position: fixed;
     top: 0;
-    right: 0; 
-    left: 0;
-    width: 100vw;
+    right: 0;
+    width: 65%;
+    height: 100%;
     text-align: center;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px rgba(233, 227, 227, 0.1);
     z-index: 1;
+    opacity: 0.95;
+    box-shadow: -1px 0px 5px;
 }
 
+.menu img{
+    width: 130px;
+}
 .menu ul {
     list-style: none;
     padding: 0;
+    
 }
 
 .menu li {
     margin:0;
+
 }
 
+.container-menu-close{
+    height: 30px;
+    background-color: #5d2417;
+}
 .menu-close {
     font-size: 20px;
     cursor: pointer;
     display: block;
     float: right;
     margin-right: 20px;
+    color: #d8d5c2;
 }
 
 /*-------------------------------------funcionalidad menu hamburguesa--------------------------------------------*/
@@ -138,19 +164,20 @@ animation: shake 1.5s infinite ease-in-out;
     display: none;
 }
 
-#menu-toggle:checked + .menu-icon + .menu + .menu-close {
+#menu-toggle:checked + .menu + .menu-close {
     display: block;
     position: fixed;
     top: 0;
     right: 0;
 }
 
+
 #menu-toggle:not(:checked) + .menu-icon {
     display: block;
 }
 
 
-#menu-toggle:not(:checked) + .menu-icon + .menu {
+#menu-toggle:not(:checked) + .menu {
     display: none;
 }
 
@@ -176,6 +203,7 @@ main p{
 /*--------------------------------------------SECCION INICIO-------------------------------------------------------*/
 
 #inicio{
+    margin-top: 10px;
     text-align: center;
     height: 500px;
     background-image: url(assets/Logo-Sierra\ mágica.jpg);
@@ -328,20 +356,21 @@ footer .derechos{
 
 
 @media screen and (max-width:768px){
-    .menu-bruger {
+    
+    .menu-burger {
         display: block;
     }
     
     .logo {
         display: none;
     }
+
+    
     
 }
 
 @media screen and (min-width:769px) and (max-width:1024px){
-    #contacto{
-
-        display: block 
-    }
+    
+    
 }
 
