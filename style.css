@@ -123,10 +123,11 @@ animation: shake 1.5s infinite ease-in-out;
     z-index: 1;
     opacity: 0.95;
     box-shadow: -1px 0px 5px;
+    
 }
-
 .menu img{
     width: 130px;
+    margin-bottom: 20px;
 }
 .menu ul {
     list-style: none;
@@ -134,13 +135,19 @@ animation: shake 1.5s infinite ease-in-out;
     
 }
 
-.menu li {
-    margin:0;
+.menu li{
+    padding: 15px;
+}
 
+.menu li a{
+    padding: 30px;
+    font-family: 'Autour One', cursive;
+    text-transform: uppercase;
+    color:#facda2;
 }
 
 .container-menu-close{
-    height: 30px;
+    height: 35px;
     background-color: #5d2417;
 }
 .menu-close {
@@ -153,6 +160,8 @@ animation: shake 1.5s infinite ease-in-out;
 }
 
 /*-------------------------------------funcionalidad menu hamburguesa--------------------------------------------*/
+
+
 #menu-toggle:checked + .menu-icon + .menu {
     display: block;
     position: fixed;
@@ -180,6 +189,8 @@ animation: shake 1.5s infinite ease-in-out;
 #menu-toggle:not(:checked) + .menu {
     display: none;
 }
+
+
 
 a{
     text-decoration: none;
