@@ -347,7 +347,7 @@ footer .derechos {
   }
 
   .menu img{
-    position: absolute;
+    position: absolute;/*revisar posiciones, quizas crear un div mas que englobe todo, sea hijo de .menu y tenga position relave*/
     bottom:-50%;
     left: 42.5%;
   }
