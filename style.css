@@ -16,372 +16,386 @@ font-family: 'Signika Negative', sans-serif;
 
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Autour+One&family=Signika+Negative:wght@300&family=Young+Serif&display=swap");
 
-
-@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Signika+Negative:wght@300&family=Young+Serif&display=swap');
-
-
-*{
-    box-sizing:border-box ;
+* {
+  box-sizing: border-box;
 }
 
-
-body{
-    padding: 0;
-    margin: 0;
-    background-color: #5d2417;
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #5d2417;
 }
 
-header{
-    display: flex;
-    justify-content: center; 
-    margin: 0;
-    width: 100vw;
-    height: 40px;
+header {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 100vw;
+  height: 40px;
 }
 
-.logo{
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-#logo-SM img{
-    width: 120px;
+#logo-SM img {
+  width: 120px;
 }
-
 
 /*------------------------------------------------------------menú hamburguesa--------------------------------------*/
 
-.container-menu-mobile{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: auto;
-    background-color:#5d2417 ;
-    position:fixed;
-    z-index: 999;
-    
-    
-
+.container-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  background-color: #5d2417;
+  position: fixed;
+  z-index: 999;
 }
 .menu-toggle {
-    display: none;
+  display: none;
 }
 
-/* .menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    float: right;
-    
-} */
-
-/* Establece la posición fija para el icono del menú hamburguesa */
+/*Establece la posición fija para el icono del menú hamburguesa */
 .menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    float: right;
-    display: none;
-    position: relative;
+  font-size: 30px;
+  cursor: pointer;
+  float: right;
+  display: none;
+  position: relative;
 }
 
-.beer-icon{
-    width: 30px;
-    cursor: pointer;
-    margin-bottom: 5px;
+.beer-icon {
+  width: 30px;
+  cursor: pointer;
+  margin-bottom: 5px;
 }
 
-.beer-icon:hover{
-animation: shake 1.5s infinite ease-in-out;
+.beer-icon:hover {
+  animation: shake 1.5s infinite ease-in-out; /*REVISAR:implementar otra animación u otra forma de abordarla*/
 }
 
 @keyframes shake {
-    0% {
-        transform: scale(1);
-    }
-    
-    50% {
-        transform: scale(1.2);
-    }
-    
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .menu {
-    display: none;
-    background-color: #000000;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 65%;
-    height: 100%;
-    text-align: center;
-    box-shadow: 0 2px 2px rgba(233, 227, 227, 0.1);
-    z-index: 1;
-    opacity: 0.95;
-    box-shadow: -1px 0px 5px;
-    
+  display: none;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(233, 227, 227, 0.1);
+  z-index: 1;
+  opacity: 0.95;
+  box-shadow: -1px 0px 5px;
 }
-.menu img{
-    width: 130px;
-    margin-bottom: 20px;
+
+.menu img {
+  width: 130px;
+  margin-bottom: 20px;
 }
 .menu ul {
-    list-style: none;
-    padding: 0;
-    
+  list-style: none;
+  padding: 0;
 }
 
-.menu li{
-    padding: 15px;
+.menu li {
+    margin:0;
+}
+.menu li a {
+  padding: 30px;
+  font-family: "Autour One", cursive;
+  text-transform: uppercase;
+  color: #facda2;
 }
 
-.menu li a{
-    padding: 30px;
-    font-family: 'Autour One', cursive;
-    text-transform: uppercase;
-    color:#facda2;
-}
-
-.container-menu-close{
-    height: 35px;
-    background-color: #5d2417;
+.container-menu-close {
+  height: 35px;
+  background-color: #5d2417;
 }
 .menu-close {
-    font-size: 20px;
-    cursor: pointer;
-    display: block;
-    float: right;
-    margin-right: 20px;
-    color: #d8d5c2;
+  font-size: 20px;
+  cursor: pointer;
+  display: block;
+  float: right;
+  margin-right: 20px;
+  color: #d8d5c2;
 }
 
 /*-------------------------------------funcionalidad menu hamburguesa--------------------------------------------*/
-
-
 #menu-toggle:checked + .menu-icon + .menu {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 #menu-toggle:checked + .menu-icon {
-    display: none;
+  display: none;
 }
 
 #menu-toggle:checked + .menu + .menu-close {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
-
 
 #menu-toggle:not(:checked) + .menu-icon {
-    display: block;
+  display: block;
 }
-
 
 #menu-toggle:not(:checked) + .menu {
-    display: none;
+  display: none;
 }
 
-
-
-a{
-    text-decoration: none;
-    color: #d8d5c2;      
+a {
+  text-decoration: none;
+  color: #d8d5c2;
 }
 
-main h1{
-    color:#f8d94c;
-    font-family:'Young Serif', serif;
-    font-weight: 100;
-    margin: 0;
-    padding: 3%;
+main h1 {
+  color: #f8d94c;
+  font-family: "Young Serif", serif;
+  font-weight: 100;
+  margin: 0;
+  padding: 3%;
 }
 
-main p{
-    color:#291C06;
-    font-family: 'Signika Negative', sans-serif;
-    font-weight:bold;
+main p {
+  color: #291c06;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: bold;
 }
 
 /*--------------------------------------------SECCION INICIO-------------------------------------------------------*/
 
-#inicio{
-    margin-top: 10px;
-    text-align: center;
-    height: 500px;
-    background-image: url(assets/Logo-Sierra\ mágica.jpg);
-    background-size: contain; 
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: #291C06;
-
+#inicio {
+  margin-top: 10px;
+  text-align: center;
+  height: 500px;
+  background-image: url(assets/Logo-Sierra\ mágica.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #291c06;
 }
 
-#nosotros{
-    height: 500px;
-    text-align: center;
-    background: linear-gradient(45deg,#793f05, #f8d94c);
-    background-size: 200% 200vw; 
-    animation: gradientAnimation 3s infinite alternate;
-    
+#nosotros {
+  height: 500px;
+  text-align: center;
+  background: linear-gradient(45deg, #793f05, #f8d94c);
+  background-size: 200% 200vw;
+  animation: gradientAnimation 3s infinite alternate;
 }
 
 @keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
-#nosotros h2{
-    margin: 0;
-    padding: 3%;
-    text-transform: uppercase;
-    font-family:'Young Serif', serif;
-    color:#5d2417;
+#nosotros h2 {
+  margin: 0;
+  padding: 3%;
+  text-transform: uppercase;
+  font-family: "Young Serif", serif;
+  color: #5d2417;
 }
 
-#nosotros p{
-    font-size: 15px;
+#nosotros p {
+  font-size: 15px;
 }
 
 /*----------------------------------------------SECCIÓN CERVEZAS----------------------------------------------------*/
 
-#cervezas{
-    display: block;
-    justify-content: center;
-    align-items:center;
-    height: auto;
-    background-color:#1e0f0c ;
-    padding-bottom: 3%;
+#cervezas {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: #1e0f0c;
+  padding-bottom: 3%;
 }
 
-#cervezas h2{
-    text-align: center;
-    padding: 3%;
-    margin: 0;
-    font-family:'Young Serif', serif;
-    text-transform: uppercase;
-    color: #f8d94c;
+#cervezas h2 {
+  text-align: center;
+  padding: 3%;
+  margin: 0;
+  font-family: "Young Serif", serif;
+  text-transform: uppercase;
+  color: #f8d94c;
 }
 
-.card-body{
-    height: 150px;
+.card-body {
+  height: 150px;
 }
-
-/*
-.tipos-cerveza{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cerveza{
-    height: 300px;
-    width: 30%;
-    padding: 3%;
-    border: #d8d5c2;
-    border-style:solid;
-} */
 
 /*-------------------------------------------------FOOTER-----------------------------------------------------------*/
-#contacto{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+
+#contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.text-contacto{
-    width: 100vw;
-    text-align: center;
-    margin: 2%;
+.text-contacto {
+  width: 100vw;
+  text-align: center;
+  margin: 2%;
 }
 
-.contacto-redes{
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
+.contacto-redes {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
 }
 
-.info-contacto{
-    text-align:center;
-    align-self: self-start;
-    
-    
+.info-contacto {
+  text-align: center;
+  align-self: self-start;
 }
 
-footer .derechos{
-    text-align: center;
+footer .derechos {
+  text-align: center;
 }
 
-.contacto-redes{
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
+.contacto-redes {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.redes{
-    margin-bottom: 3%;
+.redes {
+  margin-bottom: 3%;
 }
 
-.redes h3{
-    margin: 2%;
+.redes h3 {
+  margin: 2%;
 }
 
-.redes a img{
-    width: 20px;
-    margin: 2%;
+.redes a img {
+  width: 20px;
+  margin: 2%;
 }
 
 .form-label {
-    width: 120px; /* Ancho fijo para los labels */
-    display: inline-block;
-    text-align: right; /* Alinea el texto a la derecha para que los labels estén alineados con el input */
-    margin-right: 10px; /* Espacio entre el label y el input */
+  width: 120px; 
+  display: inline-block;
+  text-align: right; 
+  margin-right: 10px; 
 }
 
 .form-input {
-    width: 250px; /* Ancho fijo para los inputs */
+  width: 250px; /* Ancho fijo para los inputs */
 }
-
 
 #comentarios {
-    width: 100%; 
-    min-width: auto; 
-    height: 150px; 
-    max-width: 400px; 
+  width: 100%;
+  min-width: auto;
+  height: 150px;
+  max-width: 400px;
 }
 
-/* media queries */
+/* ---------------------------------------------------media queries -----------------------------------------*/
 
-
-@media screen and (max-width:768px){
-    
+@media screen and (max-width: 768px) {
+  
     .menu-burger {
-        display: block;
-    }
-    
-    .logo {
-        display: none;
-    }
+    display: block;
+  }
 
-    
-    
+
+  .logo {
+    display: none;
+  }
 }
 
-@media screen and (min-width:769px) and (max-width:1024px){
-    
-    
-}
+@media screen and (min-width: 769px) {
+  .menu-icon,
+  .beer-icon {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
 
+  .menu img{
+    position: absolute;/*revisar posiciones, quizas crear un div mas que englobe todo, sea hijo de .menu y tenga position relave*/
+    bottom:-50%;
+    left: 42.5%;
+  }
+
+  header{
+    height: 75px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu {
+    display: flex;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:85px;
+    text-align: center;
+    box-shadow: 0;
+    z-index: 1;
+    opacity: 1;
+  }
+
+  .container-menu-close {
+    display: none;
+  }
+
+  .menu ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position:sticky
+  }
+
+  .menu li{
+    padding:2%;
+  }
+
+  .menu li a{
+    padding: 0;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+  .cervezas{
+    margin-right: 60px;
+  }
+
+  .cuenta{
+    margin-left: 60px;
+  }
+
+} 
