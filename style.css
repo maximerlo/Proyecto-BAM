@@ -279,8 +279,9 @@ h1 {
 /*----------------------------------------------SECCIÓN NOSOTROS---------------------------------------------*/
 
 #nosotros {
-  height: 50vw;
-  min-height: 600px;
+  /* height: 50vw;
+  min-height: 600px; */
+  height: auto;
   text-align: center;
   /*background-image: url(assets/fondo\ madera.jpg);
    background: linear-gradient(45deg, #793f05, #f8d94c);
@@ -297,39 +298,45 @@ h1 {
   }
 } */
 
-.nosotros-wrapper {/*revisar el responsive, quizas en las media queris poner el flex-wrap, ajustar el min.width y/o quitar elementos*/
-  display: flex;
-  justify-content: space-around;
+
+/*codigo para desktop*/
+
+.nosotros-wrapper {
+  grid-template-columns: 1fr; /* Cambia a una sola columna */
+  grid-template-rows: repeat(4, 1fr); /* Cuatro filas */
+  justify-items: center;
   align-items: center;
-  height: 100%;
+  gap:10px;
 }
 
-.nosotros-text {
-  flex: 1;
-  text-align: left;
-  padding: 0 20px; /* Ajusta según sea necesario */
+.nosotros-text1, .nosotros-text2, .nosotros-video1, .nosotros-video2 {
+  grid-column: 1; /* Todos los elementos ocupan la columna 1 en la versión móvil */
 }
 
-
-.video-nosotros {
-  flex: 1;
-  max-width: 560px; /* Ajusta según sea necesario */
-  margin-left: 20px; /* Espacio entre el texto y el video, ajusta según sea necesario */
+.responsive-video, .responsive-iframe{
+  width: 300px;
+  height: 150px;
+  
 }
 
 
 
-/* #nosotros h2 {
+
+#nosotros h2 {
   margin: 0;
   padding: 3%;
   text-transform: uppercase;
   font-family: "Young Serif", serif;
   color: #5d2417;
+  text-shadow: 0px 0px 2px rgb(255, 253, 253), 0px 0px 2px #f8d94c;
 }
 
 #nosotros p {
-  font-size: 15px;
-} */
+  font-size: 0.9rem;
+  font-family: 'Autour One', cursive;
+  text-shadow: 0px 0px 2px rgb(255, 253, 253);
+  margin: 0 1px 0 1px;
+} 
 
 /*----------------------------------------------SECCIÓN CERVEZAS----------------------------------------------------*/
 
@@ -455,6 +462,15 @@ footer .derechos {
     margin: 10px;
     font-size: 1rem;
   }
+
+  /* .nosotros-wrapper {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+    grid-template-rows: repeat(4, 1fr); /* Cuatro filas */
+  }
+
+  .nosotros-text1, .nosotros-text2, .nosotros-video1, .nosotros-video2 {
+    grid-column: 1; /* Todos los elementos ocupan la columna 1 en la versión móvil */
+  } */
 }
 
 @media screen and (min-width: 769px) {
@@ -525,6 +541,40 @@ footer .derechos {
   .cuenta a {
     margin-left: 60px;
   }
+
+  /* .nosotros-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap:10px;
+  height: 100%;
+  justify-items: center;
+  align-items: center;
+}
+.nosotros-text1{
+  grid-column: 1;
+  grid-row: 1;
+}
+.nosotros-text2{
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.nosotros-video1{
+  grid-column: 2;
+  grid-row: 1;
+}
+.nosotros-video2{
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.responsive-video, .responsive-iframe{
+  width: 700px;
+  height: 400px;
+  
+} */
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 769px) {
