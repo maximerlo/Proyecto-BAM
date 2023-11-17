@@ -7,11 +7,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Proyecto Etapa 1</title>
+    <title>Cervercería Sierra Mágica</title>
 
 </head>
 
 <body>
+
+    <div id="ageVerification">
+        <div id="ageVerificationBox">
+            <p>¿SOS MAYOR DE EDAD?</p>
+            <label for="age" class="form-label">Ingresa tu fecha de nacimiento para continuar:</label>
+            <input type="text" inputmode="numeric" pattern="[0-9]*" value=""  id="age" name="age" required placeholder="Año de nacimiento">
+            <button onclick="verifyAge()">INGRESAR</button>
+            <p id="ageError">No tienes la edad suficiente para ver este contenido</p>
+
+        </div>        
+    </div>
     <header>
         <div class="container-menu">
 
@@ -85,7 +96,6 @@
                 </div>
                 <div class="video-nosotros1">
                     <video class="responsive-video" autoplay loop muted>
-                        <!-- Ruta al video descargado -->
                         <source src="assets/comercial cerveza artesanal.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -102,8 +112,6 @@
                         el valor de lo hecho a mano, en la conexión con nuestras raíces y en la belleza de lo auténtico.
                     </p>
 
-                    <!-- <p>Únete a nosotros en este viaje, donde la tradición se encuentra con la innovación y cada sorbo es
-                        un homenaje a lo artesanal. Sierras Mágicas: donde la magia nunca termina.</p> -->
                 </div>
                 
                 <div class="video-nosotros2">
@@ -195,7 +203,7 @@
                     </div>
 
                     <div class="form-consultas">
-                        <form action="" method="">
+                        <form action="https://formspree.io/f/mgejbzgg" method="POST">
                             <div class="form-group">
                                 <label for="nombre" class="form-label">Nombre:</label>
                                 <input type="text" id="nombre" name="nombre" required

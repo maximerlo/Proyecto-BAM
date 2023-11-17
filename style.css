@@ -20,7 +20,6 @@ font-family: 'Signika Negative', sans-serif;
 
 * {
   box-sizing: border-box;
-  
 }
 
 body {
@@ -29,11 +28,80 @@ body {
   background-color: #5d2417;
   width: 100%;
   overflow-x: hidden;
-  background-image: url('assets/fondo\ madera.jpg');
+  background-image: url("assets/fondo\ madera.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/*----------------------------------------------Pop-up/Modal------------------------------------*/
+#ageVerification {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 9999;
+}
+
+#ageVerificationBox {
+  width: 300px;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+  background: #000000;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+#ageVerificationBox:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+#ageVerificationBox > :first-child {
+  font-size: 1.2rem;
+  color: #5d2417;
+  font-family: "Young Serif", serif;
+  font-weight: bolder;
+}
+
+#ageVerificationBox input {
+  text-align: center;
+  border-radius: 10px;
+  background-color: #d8d5c2;
+  font-family: "Autour One", cursive;
+  font-weight: bold;
+}
+
+#ageVerificationBox button {
+  background-color: #5d2417;
+  border-radius: 10px;
+  font-family: "Young Serif", serif;
+}
+
+#ageVerificationBox button:hover {
+  background-color: #8b3c29;
+}
+.form-label {
+  font-family: "Autour One", cursive;
+  font-size: 0.8rem;
+  color: #f8d94c;
+  width: 100% !important;
+  text-align: center !important;
+}
+#ageError {
+  display: none;
+  color: rgb(153, 31, 4);
+  font-family: "Signika Negative", sans-serif;
+  font-weight: bolder;
 }
 
 header {
@@ -298,7 +366,6 @@ h1 {
   }
 } */
 
-
 /*codigo para desktop*/
 
 .nosotros-wrapper {
@@ -306,21 +373,21 @@ h1 {
   grid-template-rows: repeat(4, 1fr); /* Cuatro filas */
   justify-items: center;
   align-items: center;
-  gap:10px;
+  gap: 10px;
 }
 
-.nosotros-text1, .nosotros-text2, .nosotros-video1, .nosotros-video2 {
+.nosotros-text1,
+.nosotros-text2,
+.nosotros-video1,
+.nosotros-video2 {
   grid-column: 1; /* Todos los elementos ocupan la columna 1 en la versión móvil */
 }
 
-.responsive-video, .responsive-iframe{
+.responsive-video,
+.responsive-iframe {
   width: 300px;
   height: 150px;
-  
 }
-
-
-
 
 #nosotros h2 {
   margin: 0;
@@ -333,10 +400,10 @@ h1 {
 
 #nosotros p {
   font-size: 0.9rem;
-  font-family: 'Autour One', cursive;
+  font-family: "Autour One", cursive;
   text-shadow: 0px 0px 2px rgb(255, 253, 253);
   margin: 0 1px 0 1px;
-} 
+}
 
 /*----------------------------------------------SECCIÓN CERVEZAS----------------------------------------------------*/
 
@@ -363,7 +430,6 @@ h1 {
 }
 
 /*-------------------------------------------------FOOTER-----------------------------------------------------------*/
-
 
 #contacto {
   display: flex;
@@ -444,16 +510,15 @@ footer .derechos {
   h1 {
     font-size: 2.2rem;
     color: #5d2417;
-    
   }
 
   .text-inicio {
     display: none;
   }
-  #inicio{
+  #inicio {
     margin: 0;
   }
-  .inicio-registro p{
+  .inicio-registro p {
     font-size: 1.2rem;
   }
 
@@ -462,18 +527,13 @@ footer .derechos {
     margin: 10px;
     font-size: 1rem;
   }
-
-  /* .nosotros-wrapper {
-    grid-template-columns: 1fr; /* Cambia a una sola columna */
-    grid-template-rows: repeat(4, 1fr); /* Cuatro filas */
-  }
-
-  .nosotros-text1, .nosotros-text2, .nosotros-video1, .nosotros-video2 {
-    grid-column: 1; /* Todos los elementos ocupan la columna 1 en la versión móvil */
-  } */
 }
 
 @media screen and (min-width: 769px) {
+  #ageVerificationBox {
+    width: 500px;
+  }
+
   .menu-icon,
   .beer-icon {
     display: none;
@@ -574,7 +634,6 @@ footer .derechos {
   height: 400px;
   
 } */
-
 }
 
 @media screen and (min-width: 768px) and (max-width: 769px) {
